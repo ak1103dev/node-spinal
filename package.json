@@ -1,0 +1,24 @@
+{
+  "name": "node-spinal",
+  "version": "0.0.1",
+  "description": "nodejs and spinal microservice framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak1103dev/node-spinal.git"
+  },
+  "keywords": [
+    "nodejs",
+    "spinal",
+    "microservice"
+  ],
+  "author": "ak1103",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ak1103dev/node-spinal/issues"
+  },
+  "homepage": "https://github.com/ak1103dev/node-spinal#readme"
+}
