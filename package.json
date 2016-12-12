@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ak1103dev/node-spinal/issues"
   },
-  "homepage": "https://github.com/ak1103dev/node-spinal#readme"
+  "homepage": "https://github.com/ak1103dev/node-spinal#readme",
+  "dependencies": {
+    "spinal": "^0.4.21"
+  }
 }
