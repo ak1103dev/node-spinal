@@ -1,15 +1,12 @@
 const { addPath } = require('app-module-path');
 addPath(`${__dirname}/../../../`);
 
-const config = require(`config`)();
+const config = require('config')();
 const express = require('express');
+const routes = require('./routes');
 
 const app = express();
-
-app.use('/', (req, res) => {
-    res.send('hello');
-})
-
+routes(app);
 app.listen(config.api.port, () => {
     console.log('listen on port', config.api.port);
-})
+});
