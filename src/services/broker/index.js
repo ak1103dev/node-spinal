@@ -1,13 +1,10 @@
-var { Broker } = require('spinal')
-// var broker = new Broker({
-//   redis: 6379,
-//   restapi: 7577
-// })
-var broker = new Broker()
-broker.start(7557, () => {
-  console.log('Spinal:Broker listening...'  + 7557)
-})
+const { addPath } = require('app-module-path');
+addPath(`${__dirname}/../../..`);
 
-// setTimeout(function(){
-//   broker.stop()
-// }, 7000)
+const config = require('config')();
+const { Broker } = require('spinal');
+const broker = new Broker();
+
+broker.start(config.spinal.port, () => {
+  console.log('Spinal:Broker listening...'  + config.spinal.port);
+});
