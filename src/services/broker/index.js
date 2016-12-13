@@ -4,8 +4,8 @@ var { Broker } = require('spinal')
 //   restapi: 7577
 // })
 var broker = new Broker()
-broker.start(process.env.PORT || 7557, function(){
-  console.log('Spinal:Broker listening...' + this.port)
+broker.start(7557, () => {
+  console.log('Spinal:Broker listening...'  + 7557)
 })
 
 // setTimeout(function(){

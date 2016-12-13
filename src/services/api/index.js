@@ -1,5 +1,6 @@
 const { addPath } = require('app-module-path');
 addPath(`${__dirname}/../../../`);
+addPath(__dirname);
 
 const config = require('config')();
 const express = require('express');
