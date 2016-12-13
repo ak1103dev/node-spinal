@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "pm2 start pm2.json && pm2 logs all",
     "stop": "pm2 stop all",
+    "eslint": "eslint src/***",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +27,11 @@
   "dependencies": {
     "app-module-path": "^2.1.0",
     "spinal": "^0.4.21"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }

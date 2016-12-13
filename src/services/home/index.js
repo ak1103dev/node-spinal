@@ -9,8 +9,8 @@ const node = new Node(config.spinal.url, {
 });
 
 node.provide('hello', (req, res) => {
-    res.send('hello world');
-})
+  res.send('hello world');
+});
 
 node.start();
 

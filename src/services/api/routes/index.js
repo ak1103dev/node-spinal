@@ -1,5 +1,5 @@
 const homeRouter = require('./home');
 
 module.exports = (app) => {
-    app.use('/home', homeRouter);
-}
+  app.use('/home', homeRouter);
+};

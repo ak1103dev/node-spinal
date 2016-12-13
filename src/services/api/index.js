@@ -9,5 +9,5 @@ const routes = require('./routes');
 const app = express();
 routes(app);
 app.listen(config.api.port, () => {
-    console.log('listen on port', config.api.port);
+  console.log('listen on port', config.api.port);
 });
