@@ -26,6 +26,7 @@
   "homepage": "https://github.com/ak1103dev/node-spinal#readme",
   "dependencies": {
     "app-module-path": "^2.1.0",
+    "mongoose": "^4.7.2",
     "spinal": "^0.4.21"
   },
   "devDependencies": {
