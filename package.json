@@ -26,8 +26,11 @@
   "homepage": "https://github.com/ak1103dev/node-spinal#readme",
   "dependencies": {
     "app-module-path": "^2.1.0",
+    "compression": "^1.6.2",
     "mongoose": "^4.7.2",
-    "spinal": "^0.4.21"
+    "morgan": "^1.7.0",
+    "spinal": "^0.4.21",
+    "winston": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "^3.12.1",
