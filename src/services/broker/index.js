@@ -5,7 +5,7 @@ const config = require('config')();
 const winston = require('winston');
 
 const { Broker } = require('spinal');
-const broker = new Broker();
+const broker = new Broker({restapi: 7577});
 
 broker.start(config.spinal.port, () => {
   winston.info('Spinal:Broker listening...' + config.spinal.port);
