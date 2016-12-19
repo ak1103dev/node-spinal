@@ -1,4 +1,6 @@
 const config = require('config')();
+const winston = require('winston');
+const pick = require('lodash/pick');
 
 const { Node } = require('spinal');
 const node = new Node(config.spinal.url, {
@@ -6,9 +8,13 @@ const node = new Node(config.spinal.url, {
 });
 
 module.exports = (path) => (req, res) => {
-  node.call(path, (err, data) => {
+  const reqObj = pick(req, ['body']);
+  node.call(path, reqObj, (err, data) => {
     if (err) {
-      res.status(500).send(err);
+      const error = {};
+      error.message = err.message;
+      winston.error(path, err);
+      res.status(500).send(error);
       return;
     }
     res.send(data);

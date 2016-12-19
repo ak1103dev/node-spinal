@@ -4,6 +4,7 @@ addPath(`${__dirname}/../..`);
 
 const config = require('config')();
 const { Home } = require('models');
+const isEmpty = require('lodash/isEmpty');
 
 const { Node } = require('spinal');
 const node = new Node(config.spinal.url, {
@@ -17,12 +18,14 @@ node.provide('hello', (req, res) => {
 });
 
 node.provide('postData', (req, res) => {
-  const home = new Home({
-    title: 'Hello World',
-    num: 0
-  });
-  home.save()
-  .then(() => res.send({ success: true }));
+  if (isEmpty(req.body)) {
+    res.error(new Error('not send empty object'));
+  } else {
+    const home = new Home(req.body);
+    home.save()
+    .then(() => res.send({ success: true }))
+    .catch((e) => res.error(e));
+  }
 });
 
 node.start();
