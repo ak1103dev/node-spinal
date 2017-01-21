@@ -4,7 +4,7 @@
   "description": "nodejs and spinal microservice framework",
   "main": "index.js",
   "scripts": {
-    "dev": "pm2 start pm2.json && pm2 logs all",
+    "dev": "NODE_ENV=dev pm2 start pm2.json && pm2 logs all",
     "stop": "pm2 stop all",
     "eslint": "eslint src/***",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -38,6 +38,7 @@
     "eslint": "^3.12.1",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "eslint-plugin-standard": "^2.0.1",
+    "pm2": "^2.2.3"
   }
 }

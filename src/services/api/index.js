@@ -9,6 +9,7 @@ const compression = require('compression');
 const winston = require('winston');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
+const authorizer = require('./middleware/authorizer');
 
 const app = express();
 if (process.env.NODE_ENV === 'dev') {
@@ -17,6 +18,7 @@ if (process.env.NODE_ENV === 'dev') {
   app.use(compression());
 }
 app.use(bodyParser.json());
+app.use(authorizer);
 routes(app);
 app.listen(config.api.port, () => {
   winston.info('listen on port', config.api.port);
