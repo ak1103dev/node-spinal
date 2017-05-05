@@ -1,0 +1,27 @@
+{
+    "apps": [{
+        "name": "API",
+        "script": "src/services/api/index.js",
+        "env": {
+            "NODE_ENV": "dev"
+        },
+        "watch": true,
+        "node_args": "--harmony_destructuring"
+    }, {
+        "name": "BROKER",
+        "script": "src/services/broker/index.js",
+        "env": {
+            "NODE_ENV": "dev"
+        },
+        "watch": true,
+        "node_args": "--harmony_destructuring"
+    }, {
+        "name": "HOME",
+        "script": "src/services/home/index.js",
+        "env": {
+            "NODE_ENV": "dev"
+        },
+        "watch": true,
+        "node_args": "--harmony_destructuring"
+    }]
+}

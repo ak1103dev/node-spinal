@@ -1,0 +1,44 @@
+{
+  "name": "node-spinal",
+  "version": "0.0.1",
+  "description": "nodejs and spinal microservice framework",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev pm2 start pm2.json && pm2 logs all",
+    "stop": "pm2 stop all",
+    "eslint": "eslint src/***",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak1103dev/node-spinal.git"
+  },
+  "keywords": [
+    "nodejs",
+    "spinal",
+    "microservice"
+  ],
+  "author": "ak1103",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ak1103dev/node-spinal/issues"
+  },
+  "homepage": "https://github.com/ak1103dev/node-spinal#readme",
+  "dependencies": {
+    "app-module-path": "^2.1.0",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "lodash": "^4.17.2",
+    "mongoose": "^4.7.2",
+    "morgan": "^1.7.0",
+    "spinal": "^0.4.21",
+    "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "pm2": "^2.2.3"
+  }
+}
